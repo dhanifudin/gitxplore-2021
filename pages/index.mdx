@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import gitAnalogy from '../public/git-analogy.png'
+
 <SlidePage>
 
 <Cover>
@@ -8,18 +11,153 @@
 
 ---
 
-## Outline
+# Outline
 
-- Git
-- Markdown
-- Git Showoff
-- Hacktoberfest
+<Steps>
+  <Step><li>Markdown</li></Step>
+  <Step><li>Hacktoberfest</li></Step>
+  <Step><li>Git</li></Step>
+</Steps>
 
 ---
 
-## What's Git
+# Requirements
 
-```sh
+<Steps>
+  <Step><li>Git</li></Step>
+  <Step><li>GitHub Account</li></Step>
+  <Step><li>Markdown Editor</li></Step>
+</Steps>
+
+---
+
+# Git Installation
+
+## Linux
+```bash
+sudo apt install git # debian based
+sudo yum install git # redhat based
+```
+
+## MacOS
+```bash
+brew install git
+```
+
+## Windows
+Download and then next next next...
+
+---
+
+# Github Account
+Register Here [https://github.com](https://github.com/)
+
+Pro tip use your @polinema email to get free education pack
+
+---
+
+# Markdown Editor
+Visual Studio Code with [Markdown Preview Plugin](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
+
+---
+
+# Git vs GitHub
+
+<Steps>
+<Step><h2>Toko vs Tokop****a</h2></Step>
+<Step>We can use git in Gitlab, Bitbucket too</Step>
+</Steps>
+
+---
+
+# Introduction to Markdown
+take it easy it's just a plain text not a programming language
+
+---
+
+# Header
+
+```markdown
+# Header H1
+## Header H2
+```
+
+# Header H1
+## Header H2
+
+---
+
+# Emphasis
+
+```markdown
+*Italic* or _Italic_
+**Bold** or __Bold__
+~~Strikethrough~~
+```
+
+*Italic* or _Italic_<br />
+**Bold** or __Bold__<br />
+~~Strikethrough~~<br />
+
+---
+
+# List
+
+```markdown
+1. Ordered list item
+2. Another item
+- Unordered list item
+* Unordered list item
+```
+
+1. Ordered list item
+2. Another item
+- Unordered list item
+* Unordered list item
+
+---
+
+# Link
+
+```markdown
+[I'm a Github link](https://github.com)
+```
+
+[I'm a Github link](https://github.com)
+
+---
+
+# Images
+
+```markdown
+![Github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+```
+
+![Github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+
+---
+
+# More...
+
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+---
+
+![Hacktoberfest](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
+
+https://hacktoberfest.digitalocean.com
+
+---
+
+# Hacktoberfest Swag List
+
+https://hacktoberfestswaglist.com/
+
+---
+
+# What's Git
+
+```bash
 man git
 
 NAME
@@ -46,25 +184,18 @@ DESCRIPTION
 
 ---
 
-## Git Installation
-
-### Linux
-```sh
-sudo apt install git # debian based
-sudo yum install git # redhat based
-```
-
-### MacOS
-```sh
-brew install git
-```
-
-### Windows
-Download and then next next next...
+# You can use git in offline mode
+![So Cool!](https://media3.giphy.com/media/eB5OehaKKZ8UzQLxSr/giphy.gif?cid=790b76115d3ba4554f444d386f3eff97&rid=giphy.gif)
 
 ---
 
-### More About Git
+![Game](https://source.unsplash.com/random/800x600/?wii)
+
+Git is like playing game, you need to save data before fighting the Boss
+
+---
+
+# More About Git
 
 You can watch Missing Semester channel episode Git
 
@@ -74,5 +205,318 @@ clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 
 ---
+
+# Setup & Preparation
+
+Please create GitHub account first
+
+---
+
+# Tell git who you are
+
+```bash
+git config --global user.name "Cantik Indah Jelita"
+git config --global user.email "your@email.com"
+```
+
+---
+
+# Scenario 1: Git Basic
+
+![Git Basic](https://source.unsplash.com/random/800x600/?basic)
+
+---
+
+# Initialize Repository
+
+<Steps>
+  <Step><li>Open your terminal or git bash (in windows)</li></Step>
+  <Step><li>Create a directory</li></Step>
+  <Step><code className="language-bash">mkdir hello-git</code></Step>
+  <Step><li>Initialize repository</li></Step>
+  <Step><code className="language-bash">git init</code></Step>
+  <Step><li>Check hidden subdirectory called <em>.git</em></li></Step>
+</Steps>
+
+---
+
+# Check Repository Status
+
+<Steps>
+  <Step><li>Run following command, inside your repository</li></Step>
+  <Step><code className="language-bash">git status</code></Step>
+  <Step><li>The directory is called <b>Working Directory</b></li></Step>
+  <Step><li>All changed files will be <b>tracked</b></li></Step>
+  <Step><li>All new files are <b>untracked</b> by default</li></Step>
+</Steps>
+
+---
+
+# Add Files
+
+<Steps>
+<Step>You need to add files to the staging area</Step>
+<Step>Git has three areas</Step>
+<Step><li>Working Directory</li></Step>
+<Step><li>Staging Area</li></Step>
+<Step><li>Repository</li></Step>
+</Steps>
+
+---
+
+<Image src={gitAnalogy} />
+
+---
+
+## Add Files (continued...)
+
+- Create a new file called <b>hello.md</b>
+- Edit the content and put your name <code className="language-bash">Hello, I'm dhanifudin. I want to learn Git</code>
+- Check repository status <code className="language-bash">git status</code>
+- Compare with the previous status output
+- Add file with the following command <code className="language-bash">git add hello.md</code>
+
+---
+## Commiting files
+
+<ol>
+    <li>Move file from staging area into repository</li>
+    <li>Add message to log history</li>
+    <li>Please run command below<code className="language-bash">git commit -m "Add message hello.md"</code></li>
+</ol>
+
+---
+
+## Ignoring files
+
+<ol>
+  <Appear>
+    <li>Sometimes we need to ignore files to be untracked.</li>
+    <li>Git use pattern in <em>.gitignore</em></li>
+  </Appear>
+</ol>
+
+---
+
+## Example .gitignore
+
+```gitignore
+# Ignore all files with extensions .tmp
+*.tmp
+# Ignore node_modules directory
+node_modules/
+```
+
+
+[More Examples](https://github.com/github/gitignore)
+
+---
+
+## Show History
+
+Run command `git log` from your working directory.
+
+---
+
+## Scenario 2: Working Remote
+![Working Remote](https://source.unsplash.com/random/800x600/?remote)
+
+---
+
+import repositoryImage from '../public/create-repository.png'
+
+## Create repository
+
+<Image src={repositoryImage} />
+
+---
+
+import instructionImage from '../public/instruction-repository.png'
+
+## Follow the instructions
+
+<Image src={instructionImage} />
+
+---
+
+import pushPullImage from '../public/push-pull.jpg'
+
+<Image src={pushPullImage} />
+
+---
+
+## Push into repository
+
+Run following command below to push into remote repository.
+
+```bash
+git push -u origin <branch-name>
+```
+
+Branch ~~master~~ main is default branch in Git.
+
+---
+
+## Pull repository
+
+You can run `git pull` to update your local repository.
+
+---
+
+## What's so special about git?
+
+We have already GDrive or Dropbox
+
+---
+
+## Source Code Management vs File Sync Service
+
+---
+
+import fileRevisionImage from '../public/file-revision.png'
+
+<Image src={fileRevisionImage} />
+
+---
+
+## Automatic deployment and integration
+
+Sorry, we not cover in this session.
+
+---
+
+## Scenario 3: Forking Repository
+
+![Forking Repository](https://source.unsplash.com/random/800x600/?fork)
+
+---
+
+## Fork Repository
+
+Open https://github.com/dhanifudin/hacktoberfest-guestbook
+
+---
+
+## When We Need Forking Repository?
+
+Contribute, but you don't have write access directly.
+
+Modify the upstream repository.
+
+Don't fork, if you want only to bookmark the repository. Please use star button!
+
+---
+
+## Scenario 5: Resolve Conflict
+
+![Git conflict](https://source.unsplash.com/random/800x600/?conflict)
+
+---
+
+```bash
+$ git status
+> # On branch master
+> # You have unmerged paths.
+> #   (fix conflicts and run "git commit")
+> #
+> # Unmerged paths:
+> #   (use "git add ..." to mark resolution)
+> #
+> # both modified:      README.md
+> #
+> no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+---
+
+## How to fix this?
+
+```bash
+If you have questions, please
+<<<<<<< HEAD
+open an issue
+=======
+ask your question in IRC.
+>>>>>>> develop
+```
+
+Open text editor and focus on three available marker!
+
+---
+
+## Solution
+
+```bash
+If you have questions, please open an issue or ask in our IRC channel.
+```
+
+Don't forget to run **git add README.md** and give meaningful commit message.
+
+---
+
+## Scenario 6: Branching
+
+![Git Branching](https://source.unsplash.com/random/800x600/?branch)
+
+---
+
+## Why we need it?
+
+<ul>
+  <li>We have many version in one repository (production and development)</li>
+  <li>Develop some feature</li>
+  <li>Not affraid make mistake :)</li>
+</ul>
+
+---
+
+## How?
+
+```bash
+git checkout -b branch-name
+```
+
+---
+
+## What's next?
+
+My branch is stable now, I want to merge into master.
+
+```bash
+git checkout master
+git merge branch-name
+```
+
+---
+
+![Git Merge](https://c.tenor.com/AKq1UiO-dFAAAAAC/git-merge.gif)
+
+---
+
+# Git Workflow
+
+![Git Workflow](https://source.unsplash.com/random/800x600/?flow)
+
+---
+
+[Read The Fine Article](https://www.atlassian.com/git/tutorials/comparing-workflows)
+
+---
+
+## More....
+
+- [Katacoda courses](https://www.katacoda.com/courses/git)
+- [Learn Git Branching](https://learngitbranching.js.org/)
+- [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+
+---
+
+# Contribute
+
+Fork https://github.com/wrideveloper/gitxplore-started-2021
+
+---
+
+# Thank You
 
 </SlidePage>
